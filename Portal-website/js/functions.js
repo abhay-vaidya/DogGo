@@ -1,25 +1,25 @@
 (function ($) {
     "use strict"; // Start of use strict
     var input = {
-        "name": "Kohilan"
-        , "id": 1
-        , "order_total": 12.00
-        , "amount_paid": 0
-        , "order": [
+        "name": "Kohilan",
+        "id": 1,
+        "order_total": 12.00,
+        "amount_paid": 0,
+        "order": [
             {
-                "name": "hot dog"
-                , "type": "beef"
-                , "count": 1
-                , "price": 3.00
-                , "combo": false
+                "name": "hot dog",
+                "type": "beef",
+                "count": 1,
+                "price": 3.00,
+                "combo": false
+		},
+            {
+                "name": "fries",
+                "count": 4,
+                "price": 3.00
 		}
-            , {
-                "name": "fries"
-                , "count": 1
-                , "price": 3.00
-		}
-	]
-    , }
+	],
+}
     var customerName = input.name;
     var id = input.id;
     var order_total = input.order_total;
@@ -35,18 +35,16 @@
         var listItem = document.createElement("LI");
         htmlItemsList.appendChild(listItem);
         //        var itemName = $("<h2 class='itemName'></h2>").text(list_of_items[i].name);
-
         //Number
         var itemCount = document.createElement("H2");
         itemCount.className += 'itemCount';
-        itemCount.innerHTML = list_of_items[i].id;
-        listItem.appendChild(itemCount);
+        itemCount.innerHTML = list_of_items[i].count;
+        console.log(itemCount);
         //Circle
         var circle = document.createElement("DIV");
         circle.className += 'circle';
-        circle.innerHTML = itemCount;
         listItem.appendChild(circle);
-
+        circle.appendChild(itemCount);
         //Name
         var itemName = document.createElement("H2");
         itemName.className += 'itemName';
