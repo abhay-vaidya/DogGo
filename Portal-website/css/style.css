@@ -1,0 +1,24 @@
+body {
+  font-family: 'Montserrat', 'Heebo', 'Open Sans';
+  overflow-x: hidden;
+  background-attachment: fixed;
+  height: 100%;
+  max-width: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+nav {
+	
+}
+
+.navbar-custom {
+  background: transparent;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
