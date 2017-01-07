@@ -1,1 +1,1 @@
-# Dog-go
+# DogGo
