@@ -1,17 +1,12 @@
 (function($) {
     "use strict"; // Start of use strict
 
+    var obj = jQuery.parseJSON( '{ "name": "John" }' );
+	alert( obj.name === "John" );
+
     //Click Function
     $("p").click(function(){
         $(this).hide();
-    });
-
-    //Hover function
-    $("#p1").hover(function(){
-        alert("You entered p1!");
-    },
-    function(){
-        alert("Bye! You now leave p1!");
     });
 
     //Click function for remove button
@@ -23,6 +18,8 @@
     $(".done").click(function(){
         $(this).hide();
     });
+
+
 
 
 
