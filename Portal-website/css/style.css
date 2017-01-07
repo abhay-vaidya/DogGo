@@ -1,24 +1,74 @@
 body {
-  font-family: 'Montserrat', 'Heebo', 'Open Sans';
-  overflow-x: hidden;
-  background-attachment: fixed;
-  height: 100%;
-  max-width: 100%;
+    font-family: 'Montserrat', 'Heebo', 'Open Sans';
+    overflow-x: hidden;
+    background-attachment: fixed;
+    padding: 26px;
+    background: #ffc107;
 }
 
 html {
-  height: 100%;
+    height: 100%;
 }
 
-nav {
-	
-}
+nav {}
 
 .navbar-custom {
-  background: transparent;
-  font-family: 'Montserrat';
-  text-transform: uppercase;
-  font-weight: 700;
-  border: none;
-  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    background: transparent;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+#ticket {
+    width: 80%;
+    background: white;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+#orderNumber {
+    background: #2196f3;
+    width: 5%;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center;
+    height: 10%;
+    color: white;
+    display: inline-block;
+    border-radius: 5%;
+}
+
+#title {
+    color: white;
+}
+
+#customerName {
+    display: inline-block;
+    margin-left: 5%;
+    font-size: 4rem;
+    color: #2196f3;
+}
+
+.remove {
+    display: inline-block;
+    float: right;
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+#circle {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #515151;
+    margin: 0 0 0 10%;
+    text-align: center;
+}
+
+.itemCount {
+    color: white;
 }
