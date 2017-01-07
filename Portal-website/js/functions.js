@@ -35,8 +35,21 @@
         var listItem = document.createElement("LI");
         htmlItemsList.appendChild(listItem);
         //        var itemName = $("<h2 class='itemName'></h2>").text(list_of_items[i].name);
+
+        //Number
+        var itemCount = document.createElement("H2");
+        itemCount.className += 'itemCount';
+        itemCount.innerHTML = list_of_items[i].id;
+        listItem.appendChild(itemCount);
+        //Circle
+        var circle = document.createElement("DIV");
+        circle.className += 'circle';
+        circle.innerHTML = itemCount;
+        listItem.appendChild(circle);
+
+        //Name
         var itemName = document.createElement("H2");
-        itemName.className += ' itemName';
+        itemName.className += 'itemName';
         itemName.innerHTML = list_of_items[i].name;
         listItem.appendChild(itemName);
         console.log(listItem);
@@ -49,10 +62,10 @@
     });
     //Click function for remove button
     $(".remove").click(function () {
-        $(this).hide();
+        $("#ticket").hide();
     });
     //Click function for done button
     $(".done").click(function () {
-        $(this).hide();
+        $("#ticket").hide();
     });
 })(jQuery); // End of use strict
