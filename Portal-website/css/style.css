@@ -51,13 +51,37 @@ nav {}
     color: #2196f3;
 }
 
-.remove {
+#priceBox {
+    background: #e2e2e2;
+    width: 12%;
+    padding: 10px;
     display: inline-block;
     float: right;
+}
+
+.price {
+    padding: 16px;
+    background: #e2e2e2;
+    color: #515151;
+    display: inline-block;
+}
+
+.remove {
+    display: inline-block;
+    font-size: 3rem;
+    float: right;
     color: #b3b3b3;
+    padding: 10px;
     text-decoration: none;
 }
 
+.done{
+    padding: 16px;
+    background: #4caf50;
+    border-radius: 5%;
+    text-decoration: none;
+    color: white;
+}
 #circle {
     width: 50px;
     height: 50px;
@@ -67,8 +91,13 @@ nav {}
     background: #515151;
     margin: 0 0 0 10%;
     text-align: center;
+    display: inline-block;
 }
 
 .itemCount {
     color: white;
+}
+
+.itemName {
+    display: inline-block;
 }
