@@ -149,10 +149,11 @@
     //Click function for remove button
     $(".remove").click(function () {
         $(this).parent().parent().hide();
+        //input.splice($(this).parent().parent());
     });
     //Click function for done button
     $(".done").click(function () {
-        $(this).parent().parent().hide();
+        input.splice($(this).parent().parent());
     });
     for (var j = 0; j < input.length; j++) {
         $(function() {
