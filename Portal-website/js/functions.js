@@ -1,7 +1,7 @@
 (function ($) {
     "use strict"; // Start of use strict
     var input = [{
-        "name": "Kohilan",
+        "name": "Kohilan Moh",
         "id": 1,
         "order_total": 12.50,
         "amount_paid": 0,
@@ -21,14 +21,14 @@
 	   ],
     },
     {
-        "name": "John",
+        "name": "John Doe",
         "id": 2,
         "order_total": 14.99,
         "amount_paid": 0,
         "order": [
             {
-                "name": "sosig",
-                "type": "haram",
+                "name": "veggie poutine",
+                "type": "veggie",
                 "count": 74,
                 "price": 3.00,
                 "combo": false
@@ -37,6 +37,26 @@
                 "name": "eating sticks",
                 "count": 1,
                 "price": 3.00
+        }
+       ],
+    },
+    {
+        "name": "Billy Bob",
+        "id": 3,
+        "order_total": 3.99,
+        "amount_paid": 0,
+        "order": [
+            {
+                "name": "chilli cheese dog",
+                "type": "spicy",
+                "count": 1,
+                "price": 4.00,
+                "combo": false
+        },
+            {
+                "name": "coke",
+                "count": 1,
+                "price": 1.00
         }
        ],
     }]
@@ -118,6 +138,7 @@
             circle.className += 'circle';
             listItem.appendChild(circle);
             circle.appendChild(itemCount);
+            
             //Name
             var itemName = document.createElement("H2");
             itemName.className += 'itemName';
@@ -132,14 +153,7 @@
         doneButton.innerHTML = "DONE";
         ticket.appendChild(doneButton);
 
-        var timer = document.createElement("DIV");
-        timer.className = "yourCountdownContainer"+j;
-        ticket.appendChild(timer);
 
-        //<div class="example" data-date="2014-01-01 00:00:00"></div>
-
-
-        console.log(rowelements);
         document.body.appendChild(rowelements);
     }
 
@@ -149,18 +163,17 @@
     });
     //Click function for remove button
     $(".remove").click(function () {
-        $(this).parent().parent().hide();
+        $(this).parent().parent().parent().hide();
         num_items = num_items - 1;
-        //location.reload(true);
-        //input.splice($(this).parent().parent());
+        title.innerHTML = "Welcome, you have "+num_items+" order(s)!";
     });
     //Click function for done button
     $(".done").click(function () {
         $(this).parent().parent().hide();
         num_items = num_items - 1;
-        //location.reload(true);
-        //input.splice($(this).parent().parent());
+        title.innerHTML = "Welcome, you have "+num_items+" order(s)!";
     });
+<<<<<<< HEAD
     for (var j = 0; j < input.length; j++) {
         $(function() {
             $('.yourCountdownContainer'+j).countdown({
@@ -169,3 +182,6 @@
         });
     }
 })(jQuery); // End of use strict
+=======
+})(jQuery); // End of use strict
+>>>>>>> 8a769477d0ca7e9eb67348a9ea8609b12061ebb0
