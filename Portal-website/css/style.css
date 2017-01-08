@@ -27,25 +27,29 @@ nav {}
     position: absolute;
     transform: translateX(20%);
     background: white;
-    padding: 16px;
-    border-radius: 20px;
+    border-radius: 15px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
+
 
 #orderNumber {
     background: #2196f3;
-    width: 5%;
-    padding: 10px;
-    font-size: 3rem;
+    width: 60px;
+    margin: 25px 0 0 25px;
+    line-height: 60px;
+    font-size: 4rem;
     font-weight:1600;
     text-align: center;
     height: 10%;
     color: white;
     display: inline-block;
-    border-radius: 20%;
+    border-radius: 15px;
 }
 
 #title {
     color: white;
+    margin: 0 0 2% 15%;
 }
 
 #customerName {
@@ -67,31 +71,53 @@ nav {}
     padding: 16px;
     background: #e2e2e2;
     color: #515151;
+    font-weight: 800;
+    font-size: 4rem;
     display: inline-block;
+    margin-top: -1px;
 }
 
-.remove {
+.remove,
+.remove:link,
+.remove:visited,
+.remove:focus,
+.remove:active{
     display: inline-block;
     font-size: 3rem;
     float: right;
     color: #b3b3b3;
     padding: 10px;
+    margin: 10px 10px 0 25px;
     text-decoration: none;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
+.remove:hover{
+    color: grey;
+}
+
+#listOfItems{
+    margin: 3% 0 5% 0;
+}
 .done,
+.done:link,
+.done:visited,
+.done:focus,
 .done:active{
+    font-size: 3rem;
     padding: 16px;
     background: #4caf50;
-    border-radius: 5%;
+    border-radius: 5px;
     text-decoration: none;
     color: white;
-    margin: 0px 0px 210px 50px;
+    margin-left: 14%;
+    margin-bottom: 20px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .done:hover{
     background: green;
-    font-color: white;
+    color: white;
 }
 
 .circle {
