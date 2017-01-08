@@ -18,8 +18,8 @@
                 "count": 4,
                 "price": 3.00
 		}
-	],
-}
+	   ],
+    }
     var customerName = input.name;
     var id = input.id;
     var order_total = input.order_total;

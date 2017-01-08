@@ -96,8 +96,15 @@ nav {}
 
 .itemCount {
     color: white;
+    margin-top:10px;
 }
 
 .itemName {
     display: inline-block;
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+
+ul{
+    list-style-type:none;
 }
