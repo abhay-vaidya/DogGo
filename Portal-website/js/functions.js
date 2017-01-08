@@ -40,6 +40,11 @@
         }
        ],
     }]
+    var title = document.createElement("h2");
+    title.id = "title";
+    title.innerHTML = "Welcome, you have "+input.length+" orders!";
+    document.body.appendChild(title);
+
 
     for (var j = 0; j < input.length; j++) {
         var customerName_s = input[j].name;
@@ -126,6 +131,12 @@
         doneButton.innerHTML = "DONE";
         ticket.appendChild(doneButton);
 
+        var timer = document.createElement("DIV");
+        timer.className = "yourCountdownContainer"+j;
+        ticket.appendChild(timer);
+
+        //<div class="example" data-date="2014-01-01 00:00:00"></div>
+
 
         console.log(rowelements);
         document.body.appendChild(rowelements);
@@ -143,4 +154,11 @@
     $(".done").click(function () {
         $(this).parent().parent().hide();
     });
+    for (var j = 0; j < input.length; j++) {
+        $(function() {
+            $('.yourCountdownContainer'+j).countdown({
+                date: "June 7, 2087 15:03:26"
+            });
+        });
+    }
 })(jQuery); // End of use strict
