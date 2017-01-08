@@ -1,13 +1,24 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
 import pypyodbc
+import urllib
 
-connection = pypyodbc.connect('Driver={SQL Server};',
-        'Server=tcp:utscdogs.database.windows.net,1433', 'Database=dog_base;', 'Uid=utsc2017;Pwd=Blackychan313;')
+conDEBUG = "DRIVER={SQL Server};Database=dog_base;SERVER=tcp:utscdogs.database.windows.net,1433';Uid=utsc2017;Pwd=Blackychan313;"
+conDEBUG = urllib.parse.quote_plus(conDEBUG)
+conDEBUG = "mssql+pyodbc:///?odbc_connect=%s" % conDEBUG
 
-cursor = 
+app.config['SQLALCHEMY_DATABASE_URI'] = conDEBUG
 app = Flask(__name__)
+db = SQLAlchemy(app)
 
-@app.route('/', )
+class Example(db.Model):
+    __tablename__ = 'example'
+    id = db.Column('id',db.Integer,primary_key=True)
+    data = db.Column('data', db.Unicode)
+
+    
+@app.route('/')
 def index():
     return 'Index Page'
 
