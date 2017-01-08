@@ -148,6 +148,6 @@
     });
     //Click function for done button
     $(".done").click(function () {
-        $("#ticket").hide();
+        $(this).parent().parent().hide();
     });
 })(jQuery); // End of use strict
