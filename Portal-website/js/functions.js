@@ -40,9 +40,10 @@
         }
        ],
     }]
+    var num_items = input.length
     var title = document.createElement("h2");
     title.id = "title";
-    title.innerHTML = "Welcome, you have "+input.length+" orders!";
+    title.innerHTML = "Welcome, you have "+num_items+" orders!";
     document.body.appendChild(title);
 
 
@@ -149,11 +150,16 @@
     //Click function for remove button
     $(".remove").click(function () {
         $(this).parent().parent().hide();
+        num_items = num_items - 1;
+        //location.reload(true);
         //input.splice($(this).parent().parent());
     });
     //Click function for done button
     $(".done").click(function () {
-        input.splice($(this).parent().parent());
+        $(this).parent().parent().hide();
+        num_items = num_items - 1;
+        //location.reload(true);
+        //input.splice($(this).parent().parent());
     });
     for (var j = 0; j < input.length; j++) {
         $(function() {
