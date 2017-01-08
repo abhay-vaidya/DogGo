@@ -125,6 +125,8 @@
         doneButton.className = "btn btn-success done";
         doneButton.innerHTML = "DONE";
         ticket.appendChild(doneButton);
+
+
     
         console.log(rowelements);
         document.body.appendChild(rowelements);
@@ -142,7 +144,7 @@
     });
     //Click function for remove button
     $(".remove").click(function () {
-        $("#ticket").hide();
+        $(this).parent().parent().hide();
     });
     //Click function for done button
     $(".done").click(function () {
