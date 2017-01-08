@@ -1,7 +1,7 @@
 (function ($) {
     "use strict"; // Start of use strict
     var input = [{
-        "name": "Kohilan",
+        "name": "Kohilan Moh",
         "id": 1,
         "order_total": 12.50,
         "amount_paid": 0,
@@ -21,14 +21,14 @@
 	   ],
     },
     {
-        "name": "John",
+        "name": "John Doe",
         "id": 2,
         "order_total": 14.99,
         "amount_paid": 0,
         "order": [
             {
-                "name": "sosig",
-                "type": "haram",
+                "name": "veggie poutine",
+                "type": "veggie",
                 "count": 74,
                 "price": 3.00,
                 "combo": false
@@ -37,6 +37,26 @@
                 "name": "eating sticks",
                 "count": 1,
                 "price": 3.00
+        }
+       ],
+    },
+    {
+        "name": "Billy Bob",
+        "id": 3,
+        "order_total": 3.99,
+        "amount_paid": 0,
+        "order": [
+            {
+                "name": "chilli cheese dog",
+                "type": "spicy",
+                "count": 1,
+                "price": 4.00,
+                "combo": false
+        },
+            {
+                "name": "coke",
+                "count": 1,
+                "price": 1.00
         }
        ],
     }]
@@ -149,8 +169,9 @@
     });
     //Click function for remove button
     $(".remove").click(function () {
-        $(this).parent().parent().hide();
+        $(this).parent().parent().parent().hide();
         num_items = num_items - 1;
+        title.innerHTML = "Welcome, you have "+num_items+" order(s)!";
         //location.reload(true);
         //input.splice($(this).parent().parent());
     });
@@ -158,6 +179,7 @@
     $(".done").click(function () {
         $(this).parent().parent().hide();
         num_items = num_items - 1;
+        title.innerHTML = "Welcome, you have "+num_items+" order(s)!";
         //location.reload(true);
         //input.splice($(this).parent().parent());
     });
