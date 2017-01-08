@@ -43,7 +43,7 @@
     var num_items = input.length
     var title = document.createElement("h2");
     title.id = "title";
-    title.innerHTML = "Welcome, you have "+num_items+" orders!";
+    title.innerHTML = "Welcome, you have "+num_items+" order(s)!";
     document.body.appendChild(title);
 
 
