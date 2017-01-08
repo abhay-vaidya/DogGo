@@ -53,6 +53,7 @@
 
         var rowelements = document.createElement("DIV");
         rowelements.className = "row";
+        rowelements.id = "row";
         
         
         // Ticket
@@ -85,8 +86,10 @@
         priceGroup.appendChild(price);
 
         // Remove Button
-        var remove = document.createElement("A");
+        var remove = document.createElement("a");
         remove.className = "remove";
+        remove.href = "#";
+        remove.innerHTML = "X";
         priceGroup.appendChild(remove);
 
 
@@ -116,7 +119,13 @@
             listItem.appendChild(itemName);
 
         }
-
+        
+        var doneButton = document.createElement("BUTTON");
+        doneButton.type = "button";
+        doneButton.className = "btn btn-success done";
+        doneButton.innerHTML = "DONE";
+        ticket.appendChild(doneButton);
+    
         console.log(rowelements);
         document.body.appendChild(rowelements);
     }
