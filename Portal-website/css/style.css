@@ -22,24 +22,26 @@ nav {}
 }
 
 #ticket {
-    width: 60%;
+    width: 70%;
     min-height: 35vh;
-    margin: 20px;
+    position: absolute;
+    transform: translateX(20%);
     background: white;
     padding: 16px;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 #orderNumber {
     background: #2196f3;
     width: 5%;
     padding: 10px;
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight:1600;
     text-align: center;
     height: 10%;
     color: white;
     display: inline-block;
-    border-radius: 5%;
+    border-radius: 20%;
 }
 
 #title {
@@ -77,13 +79,21 @@ nav {}
     text-decoration: none;
 }
 
-.done{
+.done,
+.done:active{
     padding: 16px;
     background: #4caf50;
     border-radius: 5%;
     text-decoration: none;
     color: white;
+    margin: 0px 0px 210px 50px;
 }
+
+.done:hover{
+    background: green;
+    font-color: white;
+}
+
 .circle {
     width: 50px;
     height: 50px;
