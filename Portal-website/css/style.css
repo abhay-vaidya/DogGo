@@ -22,7 +22,9 @@ nav {}
 }
 
 #ticket {
-    width: 80%;
+    width: 60%;
+    min-height: 35vh;
+    margin: 20px;
     background: white;
     padding: 16px;
     border-radius: 5px;
