@@ -1,5 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 import pypyodbc
 import urllib
@@ -11,26 +13,29 @@ conDEBUG = "mssql+pyodbc:///?odbc_connect=%s" % conDEBUG
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = conDEBUG
+
+engine = create_engine("mssql+pyodbc://utsc2017:Blackychan313@utscdogs.database.windows.net")
 db = SQLAlchemy(app)
-
-class Customer(db.Model):
-    __tablename__ = 'dog_base'
-    id = db.Column('id',db.Integer,primary_key=True)
-    name = db.Column('name', db.String)
-    amount_due = db.Column('amount_due', db.Float)
-    amount_paid = db.Column('amount_paid', db.Float)
-
-    def __init__(self, id, name, order_total, amount_paid, orders):
 
 class Orders(db.Model):
     __tablename__ = 'dog_base'
 
-    name = db.Column('item', db.String)
-    type = db.Column('beef', db.String)
+    o_id = db.Column('O_id', db.Integer, primary_key=True)
+    name = db.Column('name', db.String)
+    item = db.Column('item', db.String)
+    kind = db.Column('beef', db.String)
     count = db.Column('count', db.Integer)
-    price = db.Column('price', db.Float)
+    order_total = db.Column('order_total', db.Float)
+    amount_paid = db.Column('amount_paid', db.Float)
 
-    def __init__(self, id, name, order_total, amount_paid, orders):
+    def __init__(self, o_id, name, item, kind, count, order_total, amount_paid):
+        self.o_id = o_id
+        self.name = name
+        self.item = item
+        self.kind = kind
+        self.count = count
+        self.order_total = order_total
+        self.amdount_paid = amount_paid
 
 
 @app.route('/')
