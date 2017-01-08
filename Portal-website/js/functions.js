@@ -138,6 +138,7 @@
             circle.className += 'circle';
             listItem.appendChild(circle);
             circle.appendChild(itemCount);
+            
             //Name
             var itemName = document.createElement("H2");
             itemName.className += 'itemName';
@@ -152,14 +153,7 @@
         doneButton.innerHTML = "DONE";
         ticket.appendChild(doneButton);
 
-        var timer = document.createElement("DIV");
-        timer.className = "yourCountdownContainer"+j;
-        ticket.appendChild(timer);
 
-        //<div class="example" data-date="2014-01-01 00:00:00"></div>
-
-
-        console.log(rowelements);
         document.body.appendChild(rowelements);
     }
 
@@ -172,22 +166,11 @@
         $(this).parent().parent().parent().hide();
         num_items = num_items - 1;
         title.innerHTML = "Welcome, you have "+num_items+" order(s)!";
-        //location.reload(true);
-        //input.splice($(this).parent().parent());
     });
     //Click function for done button
     $(".done").click(function () {
         $(this).parent().parent().hide();
         num_items = num_items - 1;
         title.innerHTML = "Welcome, you have "+num_items+" order(s)!";
-        //location.reload(true);
-        //input.splice($(this).parent().parent());
     });
-    for (var j = 0; j < input.length; j++) {
-        $(function() {
-            $('.yourCountdownContainer'+j).countdown({
-                date: "June 7, 2087 15:03:26"
-            });
-        });
-    }
 })(jQuery); // End of use strict
