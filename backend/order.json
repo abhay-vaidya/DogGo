@@ -1,0 +1,22 @@
+{
+	"name": "Kohilan",
+	"id": 1,
+	"amount_due": 12.00,
+	"amount_paid": 0,
+	"order": [
+		{
+			"name": "hot dog",
+			"type": "beef",
+			"count": 1,
+			"price": 3.00
+		},
+		{
+			"name": "fries",
+			"count": 1,
+			"price": 3.00
+		}
+	],
+	"combos" : [
+		"Thursday Special"
+	]
+}
