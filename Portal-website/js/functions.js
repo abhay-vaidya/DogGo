@@ -82,7 +82,7 @@
         // Price
         var price = document.createElement("H2");
         price.className = "price";
-        price.innerHTML = "$"+amount_due;
+        price.innerHTML = "$"+(amount_due.toFixed(2));
         priceGroup.appendChild(price);
 
         // Remove Button
@@ -127,16 +127,9 @@
         ticket.appendChild(doneButton);
 
 
-    
         console.log(rowelements);
         document.body.appendChild(rowelements);
     }
-
-
-    
-
-
-    
 
     //Click Function
     $("p").click(function () {
