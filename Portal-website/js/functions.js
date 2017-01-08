@@ -60,8 +60,8 @@
         var rowelements = document.createElement("DIV");
         rowelements.className = "row";
         rowelements.id = "row";
-        
-        
+
+
         // Ticket
         var ticket = document.createElement("DIV");
         ticket.className = "col-md-12";
@@ -125,7 +125,7 @@
             listItem.appendChild(itemName);
 
         }
-        
+
         var doneButton = document.createElement("BUTTON");
         doneButton.type = "button";
         doneButton.className = "btn btn-success done";

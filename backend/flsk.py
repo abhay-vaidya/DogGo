@@ -14,7 +14,6 @@ app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = conDEBUG
 
-engine = create_engine("mssql+pyodbc://utsc2017:Blackychan313@utscdogs.database.windows.net")
 db = SQLAlchemy(app)
 
 class Orders(db.Model):
