@@ -1,6 +1,6 @@
 (function ($) {
     "use strict"; // Start of use strict
-    var input = {
+    var input = [{
         "name": "Kohilan",
         "id": 1,
         "order_total": 12.00,
@@ -19,41 +19,114 @@
                 "price": 3.00
 		}
 	   ],
+    },
+    {
+        "name": "John",
+        "id": 2,
+        "order_total": 14.00,
+        "amount_paid": 0,
+        "order": [
+            {
+                "name": "sosig",
+                "type": "haram",
+                "count": 74,
+                "price": 3.00,
+                "combo": false
+        },
+            {
+                "name": "eating sticks",
+                "count": 1,
+                "price": 3.00
+        }
+       ],
+    }]
+
+    for (var j = 0; j < input.length; j++) {
+        var customerName_s = input[j].name;
+        var id = input[j].id;
+        var order_total = input[j].order_total;
+        var amount_paid = input[j].amount_paid;
+        var amount_due = order_total - amount_paid;
+        var list_of_items = input[j].order;
+
+        var body = document.getElementsByTagName('body');
+
+        var rowelements = document.createElement("DIV");
+        rowelements.className = "row";
+        
+        
+        // Ticket
+        var ticket = document.createElement("DIV");
+        ticket.className = "col-md-12";
+        ticket.id = "ticket";
+        rowelements.appendChild(ticket);
+
+        // Order Number
+        var orderNumber = document.createElement("DIV");
+        orderNumber.id = "orderNumber";
+        orderNumber.innerHTML = id;
+        ticket.appendChild(orderNumber);
+
+        // Customer Name
+        var customerName = document.createElement("H2");
+        customerName.id = "customerName";
+        customerName.innerHTML = customerName_s;
+        ticket.appendChild(customerName);
+
+        // Price Group
+        var priceGroup = document.createElement("DIV");
+        priceGroup.className ="priceGroup";
+        ticket.appendChild(priceGroup);
+
+        // Price
+        var price = document.createElement("H2");
+        price.className = "price";
+        price.innerHTML = amount_due;
+        priceGroup.appendChild(price);
+
+        // Remove Button
+        var remove = document.createElement("A");
+        remove.className = "remove";
+        priceGroup.appendChild(remove);
+
+
+        var htmlItemsList = document.createElement("UL");
+        htmlItemsList.id = "listOfItems";
+        ticket.appendChild(htmlItemsList);
+
+        //Loop through each order item
+        for (var i = 0; i < list_of_items.length; i++) {
+            var listItem = document.createElement("LI");
+            htmlItemsList.appendChild(listItem);
+
+            //Number
+            var itemCount = document.createElement("H2");
+            itemCount.className += 'itemCount';
+            itemCount.innerHTML = list_of_items[i].count;
+
+            //Circle
+            var circle = document.createElement("DIV");
+            circle.className += 'circle';
+            listItem.appendChild(circle);
+            circle.appendChild(itemCount);
+            //Name
+            var itemName = document.createElement("H2");
+            itemName.className += 'itemName';
+            itemName.innerHTML = list_of_items[i].name;
+            listItem.appendChild(itemName);
+
+        }
+
+        console.log(rowelements);
+        document.body.appendChild(rowelements);
     }
-    var customerName = input.name;
-    var id = input.id;
-    var order_total = input.order_total;
-    var amount_paid = input.amount_paid;
-    var amount_due = order_total - amount_paid;
-    var list_of_items = input.order;
-    $("#customerName").html(customerName);
-    $(".price").html("$" + amount_due);
-    $("#orderNumber").html(id);
-    var htmlItemsList = document.getElementById("listOfItems");
-    //Loop through each order item
-    for (var i = 0; i < list_of_items.length; i++) {
-        var listItem = document.createElement("LI");
-        htmlItemsList.appendChild(listItem);
-        //        var itemName = $("<h2 class='itemName'></h2>").text(list_of_items[i].name);
-        //Number
-        var itemCount = document.createElement("H2");
-        itemCount.className += 'itemCount';
-        itemCount.innerHTML = list_of_items[i].count;
-        console.log(itemCount);
-        //Circle
-        var circle = document.createElement("DIV");
-        circle.className += 'circle';
-        listItem.appendChild(circle);
-        circle.appendChild(itemCount);
-        //Name
-        var itemName = document.createElement("H2");
-        itemName.className += 'itemName';
-        itemName.innerHTML = list_of_items[i].name;
-        listItem.appendChild(itemName);
-        console.log(listItem);
-        //        $("listOfItems").append(listItem);
-        //document.querySelector('#listOfItems').appendChild(list)
-    }
+
+
+    
+
+
+    
+
     //Click Function
     $("p").click(function () {
         $(this).hide();

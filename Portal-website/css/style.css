@@ -77,6 +77,11 @@ nav {}
     margin-top: -1px;
 }
 
+.priceGroup{
+    display: inline-block;
+    float: right;
+}
+
 .remove,
 .remove:link,
 .remove:visited,
