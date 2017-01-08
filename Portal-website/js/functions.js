@@ -3,7 +3,7 @@
     var input = [{
         "name": "Kohilan",
         "id": 1,
-        "order_total": 12.00,
+        "order_total": 12.50,
         "amount_paid": 0,
         "order": [
             {
@@ -23,7 +23,7 @@
     {
         "name": "John",
         "id": 2,
-        "order_total": 14.00,
+        "order_total": 14.99,
         "amount_paid": 0,
         "order": [
             {
@@ -82,7 +82,7 @@
         // Price
         var price = document.createElement("H2");
         price.className = "price";
-        price.innerHTML = amount_due;
+        price.innerHTML = "$"+amount_due;
         priceGroup.appendChild(price);
 
         // Remove Button
