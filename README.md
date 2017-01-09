@@ -1,7 +1,7 @@
 
 ![DogGo Logo](https://i.imgur.com/26pMCAx.png)
 # DogGo 
-Hot Dogs for the next generation.
+Hot dogs for the next generation.
 ___
 ##Inspiration
 We were inspired very locally, by the resident hot dog stand owner, Nasir Al-Huttam. He's been taking orders for the UTSC community for almost a decade, and has been in need of an easier way of taking orders, as taking orders through text has been somewhat cumbersome for him.
