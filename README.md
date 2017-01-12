@@ -12,7 +12,7 @@ Small businesses, especially food stands, have a difficult time managing non-imm
 Streamline the order process and give the business a clean, interactive interface to track user orders and respond efficiently and cleanly.
 
 ##What it does
-Using Microsoft Azure and Recast.ai, we've created a chatbot that takes orders from the customer from the Facebook Messenger app, and gives the business an interactive and intuitive experience akin to buying from another human, allowing them to even pay for their meal in advance and further streamlining the process.
+Using Microsoft Azure and Recast.ai, we've created a chatbot that takes orders from the customer from the Facebook Messenger app, and gives them an interactive and intuitive experience akin to buying from another human, allowing them to even pay for their meal in advance, and further streamlining the process.
 
 ##How we built it
 For frontend, we used HTML and CSS in combination with JQuery and Javascript to receive JSON files from the serverside, and interpret that information into an interface for the business owner to look.
