@@ -1,7 +1,7 @@
 
 ![DogGo Logo](https://i.imgur.com/26pMCAx.png)
 # DogGo: Hot dogs for the next generation
-
+![Screenshot](https://i.imgur.com/f9ik7l5.png)
 ##Inspiration
 We were inspired very locally, by the resident hot dog stand owner, Nasir Al-Huttam. He's been taking orders for the UTSC community for almost a decade and has been in need of an easier way of taking orders, as taking orders through text has been somewhat cumbersome for him.
 
@@ -20,3 +20,4 @@ For frontend, we used HTML and CSS in combination with JQuery and Javascript to 
 Recast.ai as well as the Microsoft Bot Framework was used to create and deploy the chatbot and program natural language and reactive conversation with the user. Node.js was also used.
 
 The backend is powered by Python and Flask, using Microsoft Azure to deploy the database. PostgreSQL, SQLAlchemy were also used.
+
